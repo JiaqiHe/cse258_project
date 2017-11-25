@@ -18,8 +18,7 @@ In this project, we use [Reddit submissions](http://snap.stanford.edu/data/web-R
 predict = f(title information, user information, time,...)
 
 **细节：（佳琪，嘉卓）**
-分析title information
-
+- 分析title information
 -  对title进行聚类，分析出label
 - 将title所属的subreddit作为title information的一个feature
 - 对title进行降维，得到一系列关键词以作为 “is word xxx in title?” 的二进制feature
