@@ -30,3 +30,6 @@ predict = f(title information, user information, time,...)
 - 对user的权重值分析（是否为大V?) 并作为一个feature (用户分组)
 - 对user进行聚类分析出user_label
 - ...(待续)
+
+### 进展
+* 读数据的文档见load_data.py，数据是submissions.csv
