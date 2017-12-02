@@ -6,6 +6,42 @@ import matplotlib.pyplot as plt
 import os
 IMAGE_DIR = 'image_feature'
 PIC_DIR = 'pic'
+
+def load_overall_stat():
+    with open(os.path.join(IMAGE_DIR,'overall_stat.json'),'r') as fp:
+        overall_stat = json.load(fp)
+    return overall_stat
+
+def load_each_image_stat():
+    with open(os.path.join(IMAGE_DIR,'each_image_stat.json'),'r') as fp:
+        each_image_stat = json.load(fp)
+    return each_image_stat
+
+def gen_feature(target):
+    """
+    @param target: target is the prediction feature. It should be either 'number_of_comments' or 'total_votes'
+    """
+    image_vec = {}
+    each_image_stat = load_each_image_stat()
+    overall_stat = load_overall_stat()
+
+    avg_number_of_upvotes = overall_stat.get('avg_number_of_upvotes')
+    std_number_of_upvotes = overall_stat.get('std_number_of_upvotes')
+    avg_number_of_comments = overall_stat.get('avg_number_of_comments')
+    std_number_of_comments = overall_stat.get('std_number_of_comments')
+
+    for image_id,value in each_image_stat.items():
+        if target == 'number_of_comments':
+            image_vec[image_id] = [1, float(value.get('avg_number_of_upvotes')-avg_number_of_upvotes)/std_number_of_upvotes] # normalize
+        elif target == 'total_votes':
+            image_vec[image_id] = [1, float(value.get('avg_number_of_comments')-avg_number_of_comments)/std_number_of_comments]
+        else:
+            print '{0} is undefined.'.format(target)
+            break
+
+    with open(os.path.join(IMAGE_DIR,'image_vec_'+target+'.json'),'w') as f:
+        json.dump(image_vec,f)
+
 def _image():
     data = load_data()
     data = data[:len(data)/3]
@@ -47,6 +83,8 @@ def _image():
 
 if __name__ == '__main__':
     _image()
+    gen_feature("number_of_comments")
+    gen_feature("total_votes")
 
 
     
