@@ -1,6 +1,6 @@
 # title manipulation
 
-## Process
+## k-means Process
 * from csv file, read relavant data including 'title', 'number_of_upvotes', 'number_of_downvotes', 'score'
 * compute [tfidf](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) vector for each title (the dimension is roughly 4600 for each vector)
 * take as input the tfidf matrix, use [k-means](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) clustering algorithm to divide data into 10 clusters
@@ -11,3 +11,6 @@
 
 ## Future work & ideas
 * 可以试试看用k-means得到的类别信息作为feature，或者，拼接tfidf和k-means得到的类别信息，组成刻画title的feature，训练模型。
+
+## LDA
+...
