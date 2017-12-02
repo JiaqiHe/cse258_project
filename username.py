@@ -4,7 +4,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-USER_DIR = 'user'
+USER_DIR = 'user_feature'
 PIC_DIR = 'pic'
 def _load_each_user_profile():
     with open(os.path.join(USER_DIR,'each_user_profile.json'),'r') as f:
