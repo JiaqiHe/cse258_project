@@ -1,0 +1,43 @@
+Top 15 stemmed words per topic in LDA model
+
+Topic #0:
+best, work, thing, game, home, let, pleas, gonna, anoth, nice, goe, isn't, heard, probabl, reason
+Topic #1:
+happen, realli, final, sure, pretti, miss, live, great, turn, actual, aww, kitten, atheist, check, sex
+Topic #2:
+saw, nsfw, karma, laugh, alway, i'll, hard, fb, class, amaz, kitti, hit, minut, guess, human
+Topic #3:
+look, wtf, play, shit, night, bad, god, cute, awesom, xpost, imag, better, head, help, perfect
+Topic #4:
+happi, old, walk, school, didn't, style, thank, told, stori, veri, person, amp, dad, late, hot
+Topic #5:
+just, r, post, x, pictur, know, love, dog, funni, cakeday, week, water, christian, shark, scienc
+Topic #6:
+like, say, babi, good, feed, ass, break, news, noth, chan, pop, anim, white, mr, food
+Topic #7:
+fuck, come, face, i'v, seen, photo, long, big, leav, meet, movi, die, bro, second, street
+Topic #8:
+make, whenev, world, vs, job, doesn't, car, hous, someon, star, hand, space, sometim, titl, sfw
+Topic #9:
+day, cake, internet, realiz, said, brows, imagin, end, hour, moment, beauti, america, fun, anyth, close
+Topic #10:
+time, gif, everi, new, favorit, repost, post, upvot, use, befor, downvot, morn, damn, singl, lot
+Topic #11:
+quot, i'm, comment, felt, redditor, nope, ani, dure, becaus, high, problem, american, left, ex, respons
+Topic #12:
+year, parti, birthday, level, mani, yes, colleg, drive, shot, dream, troll, ad, beat, badass, natur
+Topic #13:
+feel, watch, onli, can't, stop, girlfriend, obama, bear, meanwhil, word, vote, mom, black, romney, music
+Topic #14:
+don't, whi, man, girl, littl, way, start, wait, read, yeah, mind, cool, ride, wonder, puppi
+Topic #15:
+friend, today, facebook, someon, someth, did, page, tell, ask, doe, anyon, wrong, boss, went, hear
+Topic #16:
+cat, googl, life, real, eat, war, search, soon, room, chang, wife, fit, possibl, onc, attack
+Topic #17:
+got, want, thought, hate, hey, true, bitch, talk, halloween, came, idea, alon, friday, ladi, poor
+Topic #18:
+reddit, think, tri, right, pic, you'r, danc, sandi, imgur, everyon, hell, hurrican, fight, costum, s
+Topic #19:
+guy, oh, fix, peopl, reaction, need, kid, link, jesus, rememb, parent, nom, famili, run, view
+()
