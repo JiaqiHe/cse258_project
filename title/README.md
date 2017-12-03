@@ -18,6 +18,8 @@
 * compute [TSNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) so as to transform high-dimensional vectors into 2-dimensional vectors for the purpose of displaying the clustering results
 * plot k_means clustering results using 2-dimensional vectors and the results of k-means
 ![alt text](https://github.com/IvanQin/cse258_project/blob/master/title/k-means-10-cluster(figure%201).png)
+* using subreddit info to show that k-means clustering doesn't concide with the distribution of subreddits
+![alt text](https://github.com/IvanQin/cse258_project/blob/master/title/subreddit_distribution.png)
 * train a [Neural Network](http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html#sklearn.neural_network.MLPRegressor) to predict socre (take as input the supressed tfidf vectors)
 
 ## LDA
