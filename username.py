@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 USER_DIR = 'user_feature'
-PIC_DIR = 'pic'
+PIC_DIR = 'pics'
 def _load_each_user_profile():
     with open(os.path.join(USER_DIR,'each_user_profile.json'),'r') as f:
         each_user_profile = json.load(f)
@@ -108,7 +108,7 @@ def _username():
     with open(os.path.join(USER_DIR,'all_user_post_num.json'),'w') as f:
         json.dump(dict(user_post_num),f)
 
-def _plot():
+def _evaluate():
     each_user_profile = _load_each_user_profile()
     post_list = []
     comment_list = []
@@ -117,17 +117,27 @@ def _plot():
         post_list.append(user.get('num_of_post'))
         comment_list.append(user.get('avg_comments'))
         votes_list.append(user.get('avg_votes'))
-        
-    plt.scatter(x=post_list,y=votes_list,alpha=0.5,color='r',marker='+')
-    #plt.scatter(x=comment_list,y=votes_list,alpha=0.5,color='b',marker='o')
-    plt.legend(['post_num_vs_votes'])
-    plt.savefig(os.path.join(PIC_DIR,'post_num_vs_votes.png'),format='png')
+    
+    result = {"post_num_vs_votes":np.corrcoef(post_list,votes_list).tolist(),
+    "post_num_vs_comments": np.corrcoef(post_list,comment_list).tolist(),
+    "votes_vs_comments":np.corrcoef(votes_list,comment_list).tolist()
+    }
+    with open(os.path.join(USER_DIR,'correlation_matrix.json'),'w') as fp:
+        json.dump(result,fp)
+
+    #plt.scatter(x=post_list,y=comment_list,alpha=0.5,color='r',marker='+')
+    plt.scatter(x=comment_list,y=votes_list,alpha=0.5,color='b',marker='o')
+    #plt.xlabel("number of the posts from a user")
+    plt.ylabel("average number of the votes the user obtained")
+    plt.xlabel("average number of the comments the user obtained")
+    plt.title("votes VS comments")
+    plt.savefig(os.path.join(PIC_DIR,'comments_vs_votes.png'),format='png')
 
 if __name__ == '__main__':
     #_username()
-    #_plot()
-    gen_feature("number_of_comments")
-    gen_feature("total_votes")
+    _evaluate()
+    #gen_feature("number_of_comments")
+    #gen_feature("total_votes")
 
 
     
