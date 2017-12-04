@@ -34,5 +34,6 @@ predict = f(title information, user information, time,...)
 ### 进展
 * 读数据的文档见load_data.py，数据是submissions.csv
 
-##Report
+## Report
+
 Please follow this link to read [our report](https://cn.sharelatex.com/read/gfmrmxcpcqzc).
